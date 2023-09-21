@@ -246,5 +246,10 @@ namespace projeto4
             limpaCampos();
             txtMatricula.Focus();
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

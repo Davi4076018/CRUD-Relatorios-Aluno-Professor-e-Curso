@@ -67,8 +67,9 @@
             materialTabControl1.Multiline = true;
             materialTabControl1.Name = "materialTabControl1";
             materialTabControl1.SelectedIndex = 0;
-            materialTabControl1.Size = new Size(705, 439);
+            materialTabControl1.Size = new Size(627, 317);
             materialTabControl1.TabIndex = 9;
+            materialTabControl1.SelectedIndexChanged += materialTabControl1_SelectedIndexChanged;
             // 
             // tabPage1
             // 
@@ -87,7 +88,7 @@
             tabPage1.Location = new Point(4, 31);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(697, 404);
+            tabPage1.Size = new Size(619, 282);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Cadastro";
             tabPage1.UseVisualStyleBackColor = true;
@@ -104,7 +105,7 @@
             txtId.HideSelection = true;
             txtId.Hint = "ID";
             txtId.LeadingIcon = null;
-            txtId.Location = new Point(474, 21);
+            txtId.Location = new Point(486, -87);
             txtId.MaxLength = 32767;
             txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtId.Name = "txtId";
@@ -131,13 +132,13 @@
             btnSalvar.HighEmphasis = true;
             btnSalvar.Icon = null;
             btnSalvar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnSalvar.Location = new Point(584, 349);
+            btnSalvar.Location = new Point(533, 233);
             btnSalvar.Margin = new Padding(4, 6, 4, 6);
             btnSalvar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnSalvar.Name = "btnSalvar";
             btnSalvar.NoAccentTextColor = Color.Empty;
             btnSalvar.Size = new Size(76, 36);
-            btnSalvar.TabIndex = 8;
+            btnSalvar.TabIndex = 10;
             btnSalvar.Text = "Salvar";
             btnSalvar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             btnSalvar.UseAccentColor = false;
@@ -152,7 +153,7 @@
             btnCancelar.HighEmphasis = true;
             btnCancelar.Icon = null;
             btnCancelar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnCancelar.Location = new Point(474, 349);
+            btnCancelar.Location = new Point(417, 233);
             btnCancelar.Margin = new Padding(4, 6, 4, 6);
             btnCancelar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnCancelar.Name = "btnCancelar";
@@ -181,13 +182,13 @@
             cboEstado.IntegralHeight = false;
             cboEstado.ItemHeight = 43;
             cboEstado.Items.AddRange(new object[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
-            cboEstado.Location = new Point(474, 212);
+            cboEstado.Location = new Point(327, 159);
             cboEstado.MaxDropDownItems = 4;
             cboEstado.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cboEstado.Name = "cboEstado";
-            cboEstado.Size = new Size(74, 49);
+            cboEstado.Size = new Size(135, 49);
             cboEstado.StartIndex = 0;
-            cboEstado.TabIndex = 6;
+            cboEstado.TabIndex = 7;
             // 
             // mmtbDtNascimento
             // 
@@ -204,7 +205,7 @@
             mmtbDtNascimento.Hint = "Data de nascimento";
             mmtbDtNascimento.InsertKeyMode = InsertKeyMode.Default;
             mmtbDtNascimento.LeadingIcon = null;
-            mmtbDtNascimento.Location = new Point(474, 85);
+            mmtbDtNascimento.Location = new Point(17, 85);
             mmtbDtNascimento.Mask = "99/99/9999";
             mmtbDtNascimento.MaxLength = 32767;
             mmtbDtNascimento.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
@@ -244,7 +245,7 @@
             txtSenha.HideSelection = true;
             txtSenha.Hint = "Senha";
             txtSenha.LeadingIcon = Properties.Resources.baseline_fingerprint_black_24dp;
-            txtSenha.Location = new Point(17, 281);
+            txtSenha.Location = new Point(468, 159);
             txtSenha.MaxLength = 32767;
             txtSenha.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtSenha.Name = "txtSenha";
@@ -256,8 +257,8 @@
             txtSenha.SelectionLength = 0;
             txtSenha.SelectionStart = 0;
             txtSenha.ShortcutsEnabled = true;
-            txtSenha.Size = new Size(433, 48);
-            txtSenha.TabIndex = 7;
+            txtSenha.Size = new Size(141, 48);
+            txtSenha.TabIndex = 8;
             txtSenha.TabStop = false;
             txtSenha.TextAlign = HorizontalAlignment.Left;
             txtSenha.TrailingIcon = null;
@@ -275,7 +276,7 @@
             txtCidade.HideSelection = true;
             txtCidade.Hint = "Cidade";
             txtCidade.LeadingIcon = null;
-            txtCidade.Location = new Point(254, 212);
+            txtCidade.Location = new Point(176, 159);
             txtCidade.MaxLength = 32767;
             txtCidade.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtCidade.Name = "txtCidade";
@@ -287,12 +288,13 @@
             txtCidade.SelectionLength = 0;
             txtCidade.SelectionStart = 0;
             txtCidade.ShortcutsEnabled = true;
-            txtCidade.Size = new Size(196, 48);
-            txtCidade.TabIndex = 5;
+            txtCidade.Size = new Size(129, 48);
+            txtCidade.TabIndex = 6;
             txtCidade.TabStop = false;
             txtCidade.TextAlign = HorizontalAlignment.Left;
             txtCidade.TrailingIcon = null;
             txtCidade.UseSystemPasswordChar = false;
+            txtCidade.Click += txtCidade_Click;
             // 
             // txtBairro
             // 
@@ -306,7 +308,7 @@
             txtBairro.HideSelection = true;
             txtBairro.Hint = "Bairro";
             txtBairro.LeadingIcon = null;
-            txtBairro.Location = new Point(17, 213);
+            txtBairro.Location = new Point(17, 159);
             txtBairro.MaxLength = 32767;
             txtBairro.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtBairro.Name = "txtBairro";
@@ -318,8 +320,8 @@
             txtBairro.SelectionLength = 0;
             txtBairro.SelectionStart = 0;
             txtBairro.ShortcutsEnabled = true;
-            txtBairro.Size = new Size(196, 48);
-            txtBairro.TabIndex = 4;
+            txtBairro.Size = new Size(135, 48);
+            txtBairro.TabIndex = 5;
             txtBairro.TabStop = false;
             txtBairro.TextAlign = HorizontalAlignment.Left;
             txtBairro.TrailingIcon = null;
@@ -337,7 +339,7 @@
             txtEndereco.HideSelection = true;
             txtEndereco.Hint = "Endereço";
             txtEndereco.LeadingIcon = null;
-            txtEndereco.Location = new Point(17, 150);
+            txtEndereco.Location = new Point(176, 85);
             txtEndereco.MaxLength = 32767;
             txtEndereco.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtEndereco.Name = "txtEndereco";
@@ -368,7 +370,7 @@
             txtNome.HideSelection = true;
             txtNome.Hint = "Nome";
             txtNome.LeadingIcon = null;
-            txtNome.Location = new Point(17, 85);
+            txtNome.Location = new Point(351, 21);
             txtNome.MaxLength = 32767;
             txtNome.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtNome.Name = "txtNome";
@@ -380,7 +382,7 @@
             txtNome.SelectionLength = 0;
             txtNome.SelectionStart = 0;
             txtNome.ShortcutsEnabled = true;
-            txtNome.Size = new Size(433, 48);
+            txtNome.Size = new Size(258, 48);
             txtNome.TabIndex = 1;
             txtNome.TabStop = false;
             txtNome.TextAlign = HorizontalAlignment.Left;
@@ -411,7 +413,7 @@
             txtMatricula.SelectionLength = 0;
             txtMatricula.SelectionStart = 0;
             txtMatricula.ShortcutsEnabled = true;
-            txtMatricula.Size = new Size(433, 48);
+            txtMatricula.Size = new Size(315, 48);
             txtMatricula.TabIndex = 0;
             txtMatricula.TabStop = false;
             txtMatricula.TextAlign = HorizontalAlignment.Left;
@@ -428,7 +430,7 @@
             tabPage2.Location = new Point(4, 31);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(676, 354);
+            tabPage2.Size = new Size(619, 282);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Consulta";
             tabPage2.UseVisualStyleBackColor = true;
@@ -442,7 +444,7 @@
             btnExcluir.HighEmphasis = true;
             btnExcluir.Icon = null;
             btnExcluir.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnExcluir.Location = new Point(564, 350);
+            btnExcluir.Location = new Point(523, 237);
             btnExcluir.Margin = new Padding(4, 6, 4, 6);
             btnExcluir.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnExcluir.Name = "btnExcluir";
@@ -463,7 +465,7 @@
             btnEditar.HighEmphasis = true;
             btnEditar.Icon = null;
             btnEditar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnEditar.Location = new Point(466, 350);
+            btnEditar.Location = new Point(425, 238);
             btnEditar.Margin = new Padding(4, 6, 4, 6);
             btnEditar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnEditar.Name = "btnEditar";
@@ -484,7 +486,7 @@
             btnNovo.HighEmphasis = true;
             btnNovo.Icon = null;
             btnNovo.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnNovo.Location = new Point(384, 350);
+            btnNovo.Location = new Point(343, 238);
             btnNovo.Margin = new Padding(4, 6, 4, 6);
             btnNovo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnNovo.Name = "btnNovo";
@@ -508,7 +510,7 @@
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(783, 290);
+            dataGridView1.Size = new Size(610, 228);
             dataGridView1.TabIndex = 0;
             dataGridView1.DoubleClick += dataGridView1_DoubleClick;
             // 
@@ -525,7 +527,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(711, 506);
+            ClientSize = new Size(633, 384);
             Controls.Add(materialTabControl1);
             DrawerTabControl = materialTabControl1;
             Name = "FormAluno";

@@ -202,5 +202,10 @@ namespace projeto4
         {
 
         }
+
+        private void FormCurso_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

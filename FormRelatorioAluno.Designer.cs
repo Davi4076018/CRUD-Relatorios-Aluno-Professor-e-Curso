@@ -79,7 +79,7 @@
             txtCidade.SelectionStart = 0;
             txtCidade.ShortcutsEnabled = true;
             txtCidade.Size = new Size(407, 48);
-            txtCidade.TabIndex = 2;
+            txtCidade.TabIndex = 0;
             txtCidade.TabStop = false;
             txtCidade.TextAlign = HorizontalAlignment.Left;
             txtCidade.TrailingIcon = null;
@@ -189,7 +189,7 @@
             btnImprimir.Name = "btnImprimir";
             btnImprimir.NoAccentTextColor = Color.Empty;
             btnImprimir.Size = new Size(87, 36);
-            btnImprimir.TabIndex = 1;
+            btnImprimir.TabIndex = 3;
             btnImprimir.Text = "Imprimir";
             btnImprimir.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             btnImprimir.UseAccentColor = false;
@@ -210,7 +210,7 @@
             btnVisualizar.Name = "btnVisualizar";
             btnVisualizar.NoAccentTextColor = Color.Empty;
             btnVisualizar.Size = new Size(103, 36);
-            btnVisualizar.TabIndex = 1;
+            btnVisualizar.TabIndex = 4;
             btnVisualizar.Text = "Visualizar";
             btnVisualizar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             btnVisualizar.UseAccentColor = false;

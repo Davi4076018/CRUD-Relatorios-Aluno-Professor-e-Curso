@@ -33,7 +33,6 @@
             materialTabControl1 = new ReaLTaiizor.Controls.MaterialTabControl();
             tabPage1 = new TabPage();
             cboTitulacao = new ReaLTaiizor.Controls.MaterialComboBox();
-            txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             btnCancelar = new ReaLTaiizor.Controls.MaterialButton();
             btnSalvar = new ReaLTaiizor.Controls.MaterialButton();
             txtDataNascimento = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
@@ -50,6 +49,7 @@
             btnNovo = new ReaLTaiizor.Controls.MaterialButton();
             dataGridView1 = new DataGridView();
             imageList1 = new ImageList(components);
+            txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -68,13 +68,12 @@
             materialTabControl1.Multiline = true;
             materialTabControl1.Name = "materialTabControl1";
             materialTabControl1.SelectedIndex = 0;
-            materialTabControl1.Size = new Size(810, 345);
+            materialTabControl1.Size = new Size(595, 345);
             materialTabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             tabPage1.Controls.Add(cboTitulacao);
-            tabPage1.Controls.Add(txtId);
             tabPage1.Controls.Add(btnCancelar);
             tabPage1.Controls.Add(btnSalvar);
             tabPage1.Controls.Add(txtDataNascimento);
@@ -89,10 +88,11 @@
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(802, 317);
+            tabPage1.Size = new Size(587, 317);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Cadastro";
             tabPage1.UseVisualStyleBackColor = true;
+            tabPage1.Click += tabPage1_Click;
             // 
             // cboTitulacao
             // 
@@ -110,44 +110,13 @@
             cboTitulacao.IntegralHeight = false;
             cboTitulacao.ItemHeight = 43;
             cboTitulacao.Items.AddRange(new object[] { "Graduação", "Especialização", "Mestrado", "Doutorado" });
-            cboTitulacao.Location = new Point(636, 23);
+            cboTitulacao.Location = new Point(443, 213);
             cboTitulacao.MaxDropDownItems = 4;
             cboTitulacao.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cboTitulacao.Name = "cboTitulacao";
-            cboTitulacao.Size = new Size(130, 49);
+            cboTitulacao.Size = new Size(137, 49);
             cboTitulacao.StartIndex = 0;
             cboTitulacao.TabIndex = 8;
-            // 
-            // txtId
-            // 
-            txtId.AnimateReadOnly = false;
-            txtId.AutoCompleteMode = AutoCompleteMode.None;
-            txtId.AutoCompleteSource = AutoCompleteSource.None;
-            txtId.BackgroundImageLayout = ImageLayout.None;
-            txtId.CharacterCasing = CharacterCasing.Normal;
-            txtId.Depth = 0;
-            txtId.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtId.HideSelection = true;
-            txtId.Hint = "ID";
-            txtId.LeadingIcon = null;
-            txtId.Location = new Point(6, 303);
-            txtId.MaxLength = 32767;
-            txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            txtId.Name = "txtId";
-            txtId.PasswordChar = '\0';
-            txtId.PrefixSuffixText = null;
-            txtId.ReadOnly = true;
-            txtId.RightToLeft = RightToLeft.No;
-            txtId.SelectedText = "";
-            txtId.SelectionLength = 0;
-            txtId.SelectionStart = 0;
-            txtId.ShortcutsEnabled = true;
-            txtId.Size = new Size(54, 48);
-            txtId.TabIndex = 100;
-            txtId.TabStop = false;
-            txtId.TextAlign = HorizontalAlignment.Left;
-            txtId.TrailingIcon = null;
-            txtId.UseSystemPasswordChar = false;
             // 
             // btnCancelar
             // 
@@ -157,7 +126,7 @@
             btnCancelar.HighEmphasis = true;
             btnCancelar.Icon = null;
             btnCancelar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnCancelar.Location = new Point(567, 303);
+            btnCancelar.Location = new Point(379, 274);
             btnCancelar.Margin = new Padding(4, 6, 4, 6);
             btnCancelar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnCancelar.Name = "btnCancelar";
@@ -178,7 +147,7 @@
             btnSalvar.HighEmphasis = true;
             btnSalvar.Icon = null;
             btnSalvar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnSalvar.Location = new Point(699, 303);
+            btnSalvar.Location = new Point(494, 274);
             btnSalvar.Margin = new Padding(4, 6, 4, 6);
             btnSalvar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnSalvar.Name = "btnSalvar";
@@ -206,7 +175,7 @@
             txtDataNascimento.Hint = "Data de nascimento";
             txtDataNascimento.InsertKeyMode = InsertKeyMode.Default;
             txtDataNascimento.LeadingIcon = null;
-            txtDataNascimento.Location = new Point(443, 87);
+            txtDataNascimento.Location = new Point(443, 24);
             txtDataNascimento.Mask = "99/99/9999";
             txtDataNascimento.MaxLength = 32767;
             txtDataNascimento.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
@@ -250,11 +219,11 @@
             cboEstado.IntegralHeight = false;
             cboEstado.ItemHeight = 43;
             cboEstado.Items.AddRange(new object[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
-            cboEstado.Location = new Point(443, 214);
+            cboEstado.Location = new Point(443, 87);
             cboEstado.MaxDropDownItems = 4;
             cboEstado.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cboEstado.Name = "cboEstado";
-            cboEstado.Size = new Size(69, 49);
+            cboEstado.Size = new Size(137, 49);
             cboEstado.StartIndex = 0;
             cboEstado.TabIndex = 6;
             // 
@@ -332,7 +301,7 @@
             txtAreaFormacao.HideSelection = true;
             txtAreaFormacao.Hint = "Área de formação";
             txtAreaFormacao.LeadingIcon = null;
-            txtAreaFormacao.Location = new Point(443, 24);
+            txtAreaFormacao.Location = new Point(443, 151);
             txtAreaFormacao.MaxLength = 32767;
             txtAreaFormacao.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtAreaFormacao.Name = "txtAreaFormacao";
@@ -344,7 +313,7 @@
             txtAreaFormacao.SelectionLength = 0;
             txtAreaFormacao.SelectionStart = 0;
             txtAreaFormacao.ShortcutsEnabled = true;
-            txtAreaFormacao.Size = new Size(169, 48);
+            txtAreaFormacao.Size = new Size(137, 48);
             txtAreaFormacao.TabIndex = 7;
             txtAreaFormacao.TabStop = false;
             txtAreaFormacao.TextAlign = HorizontalAlignment.Left;
@@ -454,7 +423,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(802, 317);
+            tabPage2.Size = new Size(587, 317);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Consulta";
             tabPage2.UseVisualStyleBackColor = true;
@@ -468,7 +437,7 @@
             btnExcluir.HighEmphasis = true;
             btnExcluir.Icon = null;
             btnExcluir.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnExcluir.Location = new Point(713, 306);
+            btnExcluir.Location = new Point(489, 270);
             btnExcluir.Margin = new Padding(4, 6, 4, 6);
             btnExcluir.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnExcluir.Name = "btnExcluir";
@@ -489,7 +458,7 @@
             btnEditar.HighEmphasis = true;
             btnEditar.Icon = null;
             btnEditar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnEditar.Location = new Point(615, 306);
+            btnEditar.Location = new Point(400, 271);
             btnEditar.Margin = new Padding(4, 6, 4, 6);
             btnEditar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnEditar.Name = "btnEditar";
@@ -510,7 +479,7 @@
             btnNovo.HighEmphasis = true;
             btnNovo.Icon = null;
             btnNovo.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnNovo.Location = new Point(523, 306);
+            btnNovo.Location = new Point(321, 271);
             btnNovo.Margin = new Padding(4, 6, 4, 6);
             btnNovo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnNovo.Name = "btnNovo";
@@ -534,7 +503,7 @@
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(786, 284);
+            dataGridView1.Size = new Size(584, 260);
             dataGridView1.TabIndex = 0;
             // 
             // imageList1
@@ -545,12 +514,44 @@
             imageList1.Images.SetKeyName(0, "search.png");
             imageList1.Images.SetKeyName(1, "form.png");
             // 
+            // txtId
+            // 
+            txtId.AnimateReadOnly = false;
+            txtId.AutoCompleteMode = AutoCompleteMode.None;
+            txtId.AutoCompleteSource = AutoCompleteSource.None;
+            txtId.BackgroundImageLayout = ImageLayout.None;
+            txtId.CharacterCasing = CharacterCasing.Normal;
+            txtId.Depth = 0;
+            txtId.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtId.HideSelection = true;
+            txtId.Hint = "ID";
+            txtId.LeadingIcon = null;
+            txtId.Location = new Point(7, 401);
+            txtId.MaxLength = 32767;
+            txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            txtId.Name = "txtId";
+            txtId.PasswordChar = '\0';
+            txtId.PrefixSuffixText = null;
+            txtId.ReadOnly = true;
+            txtId.RightToLeft = RightToLeft.No;
+            txtId.SelectedText = "";
+            txtId.SelectionLength = 0;
+            txtId.SelectionStart = 0;
+            txtId.ShortcutsEnabled = true;
+            txtId.Size = new Size(54, 48);
+            txtId.TabIndex = 100;
+            txtId.TabStop = false;
+            txtId.TextAlign = HorizontalAlignment.Left;
+            txtId.TrailingIcon = null;
+            txtId.UseSystemPasswordChar = false;
+            // 
             // FormProfessor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(816, 412);
+            ClientSize = new Size(601, 412);
             Controls.Add(materialTabControl1);
+            Controls.Add(txtId);
             DrawerTabControl = materialTabControl1;
             Name = "FormProfessor";
             StartPosition = FormStartPosition.CenterScreen;

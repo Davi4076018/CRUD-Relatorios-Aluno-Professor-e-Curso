@@ -243,5 +243,15 @@ namespace projeto4
             limpaCampos();
             txtMatricula.Focus();
         }
+
+        private void txtCidade_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

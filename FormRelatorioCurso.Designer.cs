@@ -78,7 +78,7 @@
             txtCidade.SelectionStart = 0;
             txtCidade.ShortcutsEnabled = true;
             txtCidade.Size = new Size(283, 48);
-            txtCidade.TabIndex = 1;
+            txtCidade.TabIndex = 0;
             txtCidade.TabStop = false;
             txtCidade.TextAlign = HorizontalAlignment.Left;
             txtCidade.TrailingIcon = null;
@@ -106,7 +106,7 @@
             cboEstado.Name = "cboEstado";
             cboEstado.Size = new Size(121, 49);
             cboEstado.StartIndex = 0;
-            cboEstado.TabIndex = 0;
+            cboEstado.TabIndex = 1;
             // 
             // groupBox2
             // 
@@ -139,7 +139,7 @@
             cboAgrupamento.Name = "cboAgrupamento";
             cboAgrupamento.Size = new Size(430, 49);
             cboAgrupamento.StartIndex = 0;
-            cboAgrupamento.TabIndex = 1;
+            cboAgrupamento.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -227,6 +227,7 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "FormRelatorioCurso";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Relatório de Cursos";
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
